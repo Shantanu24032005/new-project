@@ -1,2 +1,2 @@
 # new-project
-sample project
+tutorial website created for youtube

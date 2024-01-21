@@ -1,5 +1,124 @@
-body {
-    background-color: #FFFBF3;
+body{
+     
+     margin: 2em;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+}
+.header-left
+{
+    display: flex;
+}
+nav
+{
+    display: flex;
+}
+.get-bonkers{
+    background: #FFA800;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+    border-radius: .3em;
+    margin-top: 3em;
+}
+.cat
+{
+    height: 500px;
+    width: 100%;
+    margin-top: 3em;
+    position: relative;
+    
+
+    img{
+        width: 70px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+    .inner-circle, .outer-circle {
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .inner-circle {
+        background: #FFEBC3;
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+    }
+    .outer-circle {
+        background: white;
+        width: 500px;
+        height: 500px;
+        z-index: -2;
+    }
+}
+@media (min-width: 1200px)
+{
+    .wrap
+    {
+        margin: 0 auto;
+        padding: 0 2em;
+        max-width: 1200px;
+    }
+    a.get-bonkers
+    {
+        display: inline-block;
+        width: auto;
+        padding: 1em 2em;
+    }
+    .cat
+    {
+        position: relative;
+        img
+        {
+         max-width: 400px;
+         left: 50%;
+        }
+    }
+}
+nav ul {
+    background: white;
+    position:fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
     margin: 0;
-    font-family: 'Inter';
+    list-style: none;
+    width: 40%;
+    text-align: right;
+    padding: 2em;
+    
+
+    li {
+        margin: 2em 0;
+
+        &:nth-of-type(1) {
+            margin-bottom: 4em;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
